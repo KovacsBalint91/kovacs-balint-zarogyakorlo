@@ -1,0 +1,34 @@
+1. Feladat
+SELECT COUNT(model), manufacturer
+FROM transport
+GROUP BY manufacturer
+
+2. Feladat
+SELECT model, manufacturer,image FROM transport 
+ORDER BY cargo_capacity DESC
+LIMIT 3;
+
+3. Feladat
+SELECT model AS Típus
+FROM `transport`
+WHERE manufacturer LIKE 'a%' OR manufacturer LIKE 'b%' OR manufacturer LIKE 'c%'
+AND cargo_capacity > 1
+AND passengers > 1
+AND max_atmosphering_speed > 1
+AND crew > 1;
+
+4. Feladat
+SELECT *
+FROM `transport`
+WHERE manufacturer LIKE '%Corporation%'
+AND passengers > 0
+AND cost_in_credits BETWEEN 10000 AND 200000
+
+5. Feladat
+SELECT model AS 'Megnevezés', manufacturer AS 'Gyártó', crew
+FROM `transport` 
+WHERE crew BETWEEN 1 AND 5 AND NOT 'null' 
+AND passengers <> 0
+AND cargo_capacity <> 0
+GROUP BY crew
+LIMIT 3

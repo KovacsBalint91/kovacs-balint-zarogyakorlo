@@ -1,0 +1,110 @@
+body{
+  margin:0;
+  font-size: 16px;
+}
+
+div{
+  position:relative;
+  box-sizing:border-box;
+  padding: 20px;
+}
+.container{
+  width:100%;
+  min-height: 100vh;
+  padding:0;
+}
+
+.container:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.container>div{
+  float: left;
+  height: auto;
+}
+
+.headImage {
+  width: 300px;
+}
+
+.spaceship-list{
+  width: 100%;
+  background:  #0b88c5;
+  overflow: auto
+}
+
+.one-spaceship{
+  width: 100%;
+  background:  #000;
+}
+
+.searchbar{
+  position: relative;
+}
+
+#search-text,
+#search-button {
+  line-height: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #fae01f;
+}
+
+#search-text {
+ width:150px;
+ outline: none;
+}
+
+#search-button{
+  background: #fae01f;
+  outline: none;
+}
+
+#search-button:hover{
+  cursor: pointer;
+}
+.list-of-ships{
+  width: 100%;
+  text-align: left;
+  margin:0 5px 5px 0;
+  color: #aaa
+}
+
+.list-of-ships:hover{
+  color: #fff;
+  box-shadow: 0 0 20px white;
+}
+
+.shipImage {
+  margin: 30px 30px 0 0;
+  float: right;
+}
+
+.statistics{
+  text-align: center;
+}
+.one-spaceship{
+  color: #fff;
+}
+
+@media(min-width:1200px){
+  .spaceship-list{
+    width: 75%;
+  }
+
+  .one-spaceship{
+    width: 25%;
+  }
+
+  .container>div{
+    height: 100vh;
+  }
+  
+  .searchbar{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
